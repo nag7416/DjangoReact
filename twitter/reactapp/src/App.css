@@ -1,0 +1,1379 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+}
+a
+{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+
+.loader
+{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loader
+{
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin .4s linear infinite;
+}
+@keyframes spin {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+
+.main 
+{
+    width: 100%;
+}
+.main .inner 
+{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.main .inner .left 
+{
+    position: relative;
+    width: 25%;
+    max-width: 350px;
+    height: 100vh;
+    min-width: 280px;
+    overflow-y: hidden;
+}
+.main .inner .left .logo 
+{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.main .inner .left .logo svg 
+{
+    width: 1.75rem;
+}
+.main .inner .left .links 
+{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+.main .inner .left .links ul li 
+{
+    display: flex;
+    align-items: center;
+    padding: 2px 0;
+}
+.main .inner .left .links ul li a 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    text-decoration: none;
+    color: black;
+}
+
+.main .inner .left .links ul li a svg 
+{
+    height: 1.75rem;
+    color: rgba(15,20,25,1.00);
+    padding: 1px;
+
+}
+.main .inner .left .links ul li a label
+{
+    margin-left: 20px;
+    margin-right: 16px;
+    font-size: 18px;
+    font-size: 700;
+    pointer-events: none;
+    font-weight: 300;
+    margin-top: 6px;
+}
+.main .inner .left .links ul li.active a label
+{
+    font-weight: 500;
+}
+/* .main .inner .left .links ul li:hover a label 
+{
+    font-weight: 400;
+} */
+
+.main .inner .left .postbtn 
+{
+    width: 95%;
+    margin-top: 15px;
+}
+.main .inner .left .postbtn button
+{
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 40px;
+    border: none;
+    background: dodgerblue;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .inner .left .postbtn button svg 
+{
+    height: 1.75rem;
+    fill: white;
+}
+
+
+
+.main .inner .left .accountpart
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 95%;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.main .inner .left .accountpart .accountleft
+{
+    padding: 10px 0px 10px 10px;
+}
+.main .inner .left .accountpart .accountright
+{
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+}
+.main .inner .left .accountpart .accountright label 
+{
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    color: rgb(15, 20, 25);
+}
+.main .inner .left .accountpart .accountright p 
+{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(83, 100, 113);
+}
+.main .inner .left .accountpart .accountleft .accountimg 
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.main .inner .left .accountpart .accountleft .accountimg img 
+{
+    width: 100%;
+}
+
+
+.main .inner .left .actionbtn
+{
+    width: 30px;
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.main .inner .left .actionbtn svg
+{
+    width: 24px;
+    height: 24px;
+}
+
+
+
+
+
+
+.main .inner .center 
+{
+    width: 50%;
+    max-width: 650px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+
+
+    position: relative;
+}
+.main .inner .center::-webkit-scrollbar
+{
+    width: 0;
+}
+.main .inner .center .centerinner 
+{
+    width: 93%;
+    height: 100vh;
+}
+
+.main .inner .center .centerinner .centertop 
+{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+   z-index: 10000;
+}
+.main .inner .center .centerinner .messagecon
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .inner .center .centerinner .messagecon .no 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .inner .center .centerinner .messagecon .no h2 
+{
+    font-size: 31px;
+    font-weight: 800;
+    line-height: 36px;
+    color: rgb(15, 20, 25);
+}
+.main .inner .center .centerinner .messagecon .no label 
+{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(83, 100, 113);
+}
+.main .inner .center .centerinner .centertop button
+{
+    width: calc(50% - 25px);
+    height: 100%;
+
+    border: none;
+    background: none;
+    outline: none;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: rgb(15, 20, 25);
+
+    position: relative;
+    cursor: pointer;
+}
+.main .inner .center .centerinner .centertop button label
+{
+    position: relative;
+    color: rgb(83, 100, 113);
+    pointer-events: none;
+}
+.main .inner .center .centerinner .centertop button.active label 
+{
+    color: rgb(0,0,0);
+}
+.main .inner .center .centerinner .centertop button.active label::before
+{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background: dodgerblue;
+    border-radius: 10px;
+}
+.main .inner .center .centerinner .centertop .setting 
+{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .inner .center .centerinner .centertop .setting svg 
+{
+    width: 24px;
+}
+
+
+
+.main .inner .center .centerinner .writepost 
+{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 15px;
+
+    overflow-x: hidden;
+    margin-bottom: 15px;
+}
+.main .inner .center .centerinner .writepost .writepostleft 
+{
+    width: 40px;
+    min-width: 40px;
+    margin-right: 10px;
+}
+.main .inner .center .centerinner .writepost .writepostleft .writeuserimg 
+{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.main .inner .center .centerinner .writepost .writepostleft .writeuserimg img 
+{
+    width: 100%;
+}
+
+.main .inner .center .centerinner .writepost .writepostright 
+{
+    width: calc(100% - 50px);
+}
+.main .inner .center .centerinner .writepost .writepostright .userinput 
+{
+    width: 100%;
+}
+.main .inner .center .centerinner .writepost .writepostright .userinput textarea 
+{
+    width: calc(100% - 0px);
+    resize: none;
+    outline: none;
+    border: none;
+
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(15, 20, 25);
+}
+.main .inner .center .centerinner .writepost .writepostright .userinput textarea::placeholder
+{
+    color: rgb(83, 100, 113);
+}
+
+
+.main .inner .center .centerinner .writepost .writepostright .postbottom 
+{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main .inner .center .centerinner .writepost .writepostright .postbottom .postbottomright 
+{
+    display: flex;
+    align-items: center;
+}
+.main .inner .center .centerinner .writepost .writepostright .postbottom .postbottomright button
+{
+    padding: 8px 18px;
+    margin-right: 10px;
+
+    border: none;
+    background: dodgerblue;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.main .inner .center .centerinner .writepost .writepostright .postbottom .postbottomright button:disabled
+{
+    background: rgb(165, 207, 248);
+}
+
+
+.main .inner .center .centerinner .writepost .writepostright .postbottom .postbottomright .wordscount
+{
+    font-size: 14px;
+    user-select: none;
+}
+
+
+
+
+
+.main .inner .center .centerinner .posts 
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main .inner .center .centerinner .posts .post 
+{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.main .inner .center .centerinner .posts .post .postleft 
+{
+    width: 40px;
+    min-width: 40px;
+    margin-right: 12px;
+}
+
+.main .inner .center .centerinner .posts .post .postleft .postuser_img 
+{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.main .inner .center .centerinner .posts .post .postleft .postuser_img img 
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.main .inner .center .centerinner .posts .post .postright 
+{
+    width: calc(100% - 52px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main .inner .center .centerinner .posts .post .postright .postcontent
+{
+    width: 100%;
+    overflow-x: hidden;
+    margin-top: 8px;
+}
+.main .inner .center .centerinner .posts .post .postright .postrighttop 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main .inner .center .centerinner .posts .post .postright .postrighttop .postrightname label
+{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: rgb(15, 20, 25);
+    pointer-events: none;
+}
+.main .inner .center .centerinner .posts .post .postright .postrighttop .postrightname span 
+{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(83, 100, 113);
+    margin-left: 5px;
+}
+.main .inner .center .centerinner .posts .post .postright .postrighttop .postcontent
+{
+    display: flex;
+    align-items: center;
+}
+.main .inner .center .centerinner .posts .post .postright .postrighttop .postcontent p
+{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(15, 20, 25);
+}
+
+
+.main .inner .center .centerinner .posts .post .postright .postimg 
+{
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    margin-top: 10px;
+}
+.main .inner .center .centerinner .posts .post .postright .postimg a 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.main .inner .center .centerinner .posts .post .postright .postimg img 
+{
+   width: 100%;
+}
+
+
+.main .inner .center .centerinner .posts .post .postright .post_bottom
+{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main .inner .center .centerinner .posts .post .postright .post_bottom svg 
+{
+    width: 20px;
+    fill: rgb(83, 100, 113);
+    cursor: pointer;
+}
+.main .inner .center .centerinner .posts .post .postright .post_bottom div 
+{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .inner .center .centerinner .posts .post .postright .post_bottom div label 
+{
+    margin-left: 5px;
+    font-size: 13px;
+    color: rgb(83, 100, 113);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+.main .inner .center .centerinner .posts .post .postright .post_bottom .save svg 
+{
+    margin-left: 8px;
+}
+
+
+
+
+
+
+
+.main .inner .center .centerinner .mediacon 
+{
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 4px;
+}
+.main .inner .center .centerinner .mediacon .mediaimg 
+{
+    height: 200px;
+
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+.main .inner .center .centerinner .mediacon .mediaimg img 
+{
+    width: 100%;
+}
+
+
+
+.main .inner .center .centerinner .posts .post .postright .postrighttop form input 
+{
+    width: calc(100% - 10px);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    border-radius: 20px;
+    border: none;
+    background: rgb(238, 242, 246);
+    outline: none;
+}
+
+
+
+
+.main .inner .right
+{
+    width: 25%;
+    max-width: 330px;
+    height: 100vh;
+    min-width: 280px;
+    padding-left: 20px;
+}
+.main .inner .right .searchcon 
+{
+    width: 95%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.main .inner .right .searchcon .searchinner 
+{
+    position: relative;
+    border: .5px solid transparent;
+    width: 100%;
+    border-radius: 30px;
+}
+.main .inner .right .searchcon .searchinner input 
+{
+   width: calc(100% - 40px);
+   border: none;
+   padding: 11px 0;
+   outline: none;
+   padding-left: 40px;
+   border-radius: 30px;
+   background: #eff3f4;
+   color: rgba(83,100,113,1.00);
+}
+.main .inner .right .searchcon .searchinner svg 
+{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    fill: rgba(83,100,113,1.00);
+}
+.main .inner .right .searchcon .searchinner:focus-within
+{
+    border: .5px solid dodgerblue;
+
+}
+.main .inner .right .searchcon .searchinner:focus-within svg
+{
+    fill: dodgerblue;
+}
+.main .inner .right .searchcon .searchinner:focus-within input 
+{
+    background: white;
+}
+.main .inner .right .premium .premiuminner
+{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.main .inner .right .premium .premiuminner h3 
+{
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(15, 20, 25);
+}
+.main .inner .right .premium .premiuminner p 
+{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(15, 20, 25);
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+.main .inner .right .premium .premiuminner button
+{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    background: rgb(0,0,0);
+    padding: 9px 16px;
+    line-height: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    border-radius: 30px;
+    border: none;
+}
+
+
+.main .inner .right .whats 
+{
+    width: 95%;
+    margin-top: 30px;
+}
+.main .inner .right .whats h3 
+{
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    color: rgb(15, 20, 25);
+}
+.main .inner .right .whats .lists
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+.main .inner .right .whats .lists a 
+{
+    text-decoration: none;
+    color: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 5px 0;
+
+}
+
+.main .inner .right .whats .lists .list .top label 
+{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(83, 100, 113);
+    pointer-events: none;
+}
+.main .inner .right .whats .lists .list .bottom p 
+{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: rgb(15, 20, 25);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main .inner .center .centerinner .centertop .profiletop
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.main .inner .center .centerinner .centertop .profiletop button
+{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; 
+}
+.main .inner .center .centerinner .centertop .profiletop button svg 
+{
+    width: 24px;
+    height: 24px;
+}
+.main .inner .center .centerinner .centertop .profiletop .profilename 
+{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.main .inner .center .centerinner .centertop .profiletop .profilename label 
+{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: rgb(15, 20, 25);
+}
+.main .inner .center .centerinner .centertop .profiletop .profilename span 
+{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(83, 100, 113);
+}
+
+
+.main .inner .center .centerinner .profilesection .banner
+{
+    width: 100%;
+    height: 200px;
+    background: ; 
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+.main .inner .center .centerinner .profilesection .followingoption
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 60px;
+}
+.main .inner .center .centerinner .profilesection .followingoption button:last-child
+{
+    border-radius: none;
+    /* padding: 7px 15px; */
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 30px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .inner .center .centerinner .profilesection .followingoption button:nth-child(1)
+{
+    border-radius: 50%;
+}
+.main .inner .center .centerinner .profilesection .followingoption button:nth-child(2)
+{
+    border-radius: 50%;
+}
+.main .inner .center .centerinner .profilesection .followingoption button
+{
+    padding: 8px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: .5px solid lightgray;
+    background: none;
+}
+
+.main .inner .center .centerinner .profilesection .followingoption button svg 
+{
+    width: 18px;
+    height: 18px;
+}
+
+.main .inner .center .centerinner .profilesection .profileimgsection
+{
+    margin-top: -130px;
+    width: 60%;
+    border-radius: 50%;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.main .inner .center .centerinner .profilesection .profileimgsection .profileimg 
+{
+    width: 135px;
+    height: 135px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .inner .center .centerinner .profilesection .profileimgsection .profileimg img 
+{
+    width: 100%;
+}
+
+.main .inner .center .centerinner .profilesection .profileimgsection h3 
+{
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    color: rgb(15, 20, 25);
+
+    margin-top: 15px;
+}
+.main .inner .center .centerinner .profilesection .profileimgsection h4 
+{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(83, 100, 113);
+    margin-bottom: 10px;
+}
+
+.main .inner .center .centerinner .profilesection .ground
+{
+    margin-bottom: 20px;
+}
+.main .inner .center .centerinner .profilesection .ground .profiledesc
+{
+    margin: 10px 0;
+}
+.main .inner .center .centerinner .profilesection .ground .profiledesc p
+{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(15, 20, 25);
+    margin-left: 20px;
+}
+.main .inner .center .centerinner .profilesection .ground .details 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    padding-left: 20px;
+}
+.main .inner .center .centerinner .profilesection .ground .details svg 
+{
+    width: 18px;
+    height: 18px;
+    fill: rgb(83, 100, 113);
+    margin-right: 1px;
+}
+.main .inner .center .centerinner .profilesection .ground .details div 
+{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    width: 100% / 3;
+}
+.main .inner .center .centerinner .profilesection .ground .details label 
+{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 12px;
+    color: rgb(83, 100, 113);
+}
+
+.main .inner .center .centerinner .profilesection .ground .followerssection
+{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+
+    font-size: 14px;
+    /* font-weight: 700; */
+    line-height: 16px;
+}
+.main .inner .center .centerinner .profilesection .ground .followerssection .followers 
+{
+    margin-left: 20px;
+}
+
+
+.main .inner .center .centerinner .profilesection .profilebtns
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.main .inner .center .centerinner .profilesection .profilebtns .profbtns
+{
+    width: 100%;
+}
+.main .inner .center .centerinner .profilesection .profilebtns .profbtns ul 
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.main .inner .center .centerinner .profilesection .profilebtns .profbtns ul li 
+{
+    width: calc(100% / 4);
+}
+.main .inner .center .centerinner .profilesection .profilebtns .profbtns ul li a button
+{
+    width: 100%;
+    padding: 12px 0;
+    background: none;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.main .inner .center .centerinner .profilesection .profilebtns .profbtns ul li a button:hover 
+{
+    background: rgb(235, 235, 235);
+}
+.main .inner .center .centerinner .profilesection .profilebtns .profbtns ul li a button label 
+{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: rgb(15, 20, 25);
+    pointer-events: none;
+    position: relative;
+}
+.main .inner .center .centerinner .profilesection .profilebtns .profbtns ul li.active a button label::before
+{
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: dodgerblue;
+    border-radius: 30px;
+}
+.main .inner .center .centerinner .profilesection .profilebtns .profbtns ul li.active a button label
+{
+    color: dodgerblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main .inner .center .centerinner .centertop .centersearch
+{
+    width: calc(100% - 50px);
+}
+.main .inner .center .centerinner .centertop .centersearch form
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .inner .center .centerinner .centertop .centersearch form input
+{
+    width: calc(100% - 50px);
+    padding: 8px 0;
+    padding-left: 10px;
+    border-radius: 40px;
+    outline: none;
+    border: .5px solid transparent;
+    background: rgb(237, 240, 244);
+}
+.main .inner .center .centerinner .centertop .centersearch form input:focus 
+{
+    background: white;
+    border: .5px solid dodgerblue;
+}
+.main .inner .center .centerinner .centertop .centersearch h4 
+{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: rgb(15, 20, 25);
+}
+.main .inner .center .centerinner .notifslist 
+{
+    width: 100%;
+}
+.main .inner .center .centerinner .notifslist .btnslist 
+{
+    width: 100%;
+    display: flex;
+}
+.main .inner .center .centerinner .notifslist .btnslist a 
+{
+    width: calc(100% / 3);
+}
+.main .inner .center .centerinner .notifslist .btnslist button
+{
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    background: none;
+    cursor: pointer;
+}
+.main .inner .center .centerinner .trend-list 
+{
+    width: 100%;
+}
+.main .inner .center .centerinner .trend-list .btnlist 
+{
+    width: 100%;
+    display: flex;
+}
+.main .inner .center .centerinner .trend-list .btnlist button
+{
+    width: calc(100% / 5);
+    border: none;
+    padding: 12px 0;
+    background: none;
+    cursor: pointer;
+}
+.main .inner .center .centerinner .trend-list .btnlist a 
+{
+    width: calc(100% / 5);
+}
+.main .inner .center .centerinner .trend-list .btnlist a button
+{
+    width: 100%;
+}
+.main .inner .center .centerinner .notifslist .btnslist button label 
+{
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    color: rgb(83, 100, 113);
+    pointer-events: none;
+    position: relative;
+}
+.main .inner .center .centerinner .trend-list .btnlist button label 
+{
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    color: rgb(83, 100, 113);
+    pointer-events: none;
+    position: relative;
+}
+
+.main .inner .center .centerinner .notifslist .btnslist button.active label
+{
+    color: black;
+}
+.main .inner .center .centerinner .trend-list .btnlist button.active label
+{
+    color: black;
+}
+.main .inner .center .centerinner .notifslist .btnslist button.active label::before
+{
+    content: '';
+    position: absolute;
+    bottom: -12.5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: dodgerblue;
+    border-radius: 30px;
+}
+.main .inner .center .centerinner .notifslist .notifsection
+{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .inner .center .centerinner .trend-list .btnlist button.active label::before
+{
+    content: '';
+    position: absolute;
+    bottom: -12.5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: dodgerblue;
+    border-radius: 30px;
+}
+.main .inner .center .centerinner .trend-list .trends 
+{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.main .inner .center .centerinner .trend-list .trends .no 
+{
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main .inner .center .centerinner .trend-list .trends a 
+{
+    width: 91%;
+}
+.main .inner .center .centerinner .trend-list .trends .link 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0;
+}
+.main .inner .center .centerinner .trend-list .trends .link:hover 
+{
+    background-color: rgb(233, 233, 233);
+}
+.main .inner .center .centerinner .trend-list .trends .link label 
+{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: rgb(15, 20, 25);
+}
+.main .inner .center .centerinner .trend-list h3 
+{
+    margin-top: 10px;
+}
+.main .inner .center .centerinner .trend-list .trends .link span 
+{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(83, 100, 113);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1400px)
+{
+    .main .inner .left
+    {
+        width: 65px;
+        min-width: 65px;
+    }
+    .main .inner .left .logo
+    {
+        justify-content: center;
+    }
+    .main .inner .left .links ul li a label
+    {
+        display: none;
+    }
+    .main .inner .left .links ul li a
+    {
+        justify-content: center;
+    }
+    .main .inner .left .accountpart .accountright
+    {
+        display: none;
+    }
+    .main .inner .left .actionbtn
+    {
+        display: none;
+    }
+    .main .inner .right
+    {
+        min-width: 300px;
+    }
+    .main .inner .left .postbtn
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main .inner .left .postbtn button
+    {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 1200px)
+{
+    .main .inner
+    {
+        width: 100%;
+    }
+    .main .inner .center
+    {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 880px){
+    .main .inner .right
+    {
+        display: none;
+    }
+
+
+    .main .inner .center 
+    {
+        background: ;
+    }
+}

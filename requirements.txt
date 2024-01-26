@@ -1,0 +1,4 @@
+Django==4.1.7
+django_ckeditor==6.5.1
+django_taggit==3.0.0
+djangorestframework==3.12.4

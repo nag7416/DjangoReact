@@ -40,6 +40,7 @@ function App() {
         })
         .then(data => {
           console.log(data);
+          console.log(data[0]);
             setUserData(data[0]);
             setPosts(data[0].user_posts);
         })
